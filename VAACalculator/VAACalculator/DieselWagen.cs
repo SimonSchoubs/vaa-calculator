@@ -9,11 +9,19 @@ namespace VAACalculator
 
         public DieselWagen(string prijs, string jaar, string nummerplaat, string nox)
         {
-            if (prijs == null || prijs == "" || !decimal.TryParse(prijs, out decimal parsedPrijs))
+            if (prijs == null || prijs == "")
+            {
+                throw new Exception("Prijs mag niet leeg zijn");
+            }
+            if (!decimal.TryParse(prijs, out decimal parsedPrijs || parsedPrijs <= 0))
             {
                 throw new Exception("Prijs moet een correcte waarde hebben!");
             }
-            if (jaar == null || jaar == "" || !int.TryParse(jaar, out int parsedJaar))
+            if (jaar == null || jaar == "")
+            {
+                throw new Exception("Jaar mag niet leeg zijn!");
+            }
+            if (!int.TryParse(jaar, out int parsedJaar) || parsedJaar < 1900 || parsedJaar > DateTime.Now.Year))
             {
                 throw new Exception("Jaar moet een correcte waarde hebben!");
             }
@@ -25,7 +33,11 @@ namespace VAACalculator
             {
                 throw new Exception("Nummerplaat vorm is niet juist!");
             }
-            if (nox == null || nox == "" || !decimal.TryParse(nox, out decimal parsedNox))
+            if (nox == null || nox == "")
+            {
+                throw new Exception("NOx mag niet leeg zijn!");
+            }
+            if (!decimal.TryParse(nox, out decimal parsedNox))
             {
                 throw new Exception("NOx moet een correcte waarde hebben!");
             }

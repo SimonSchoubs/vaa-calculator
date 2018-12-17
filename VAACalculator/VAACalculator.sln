@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAACalculator", "VAACalculator\VAACalculator.csproj", "{7AD33464-DCDD-46F9-8A85-1A236F2DA4CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3D8DF13B-61F1-4CBA-8143-8E9D8EA875F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7AD33464-DCDD-46F9-8A85-1A236F2DA4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AD33464-DCDD-46F9-8A85-1A236F2DA4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AD33464-DCDD-46F9-8A85-1A236F2DA4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8DF13B-61F1-4CBA-8143-8E9D8EA875F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8DF13B-61F1-4CBA-8143-8E9D8EA875F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8DF13B-61F1-4CBA-8143-8E9D8EA875F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8DF13B-61F1-4CBA-8143-8E9D8EA875F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

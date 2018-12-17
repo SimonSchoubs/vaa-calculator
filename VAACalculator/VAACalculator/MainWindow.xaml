@@ -22,7 +22,7 @@
         <Button x:Name="AddDieselWagen" Content="Voeg diesel wagen toe" HorizontalAlignment="Left" Margin="618,115,0,0" VerticalAlignment="Top" Width="143" Click="AddDieselWagen_Click"/>
         <Button x:Name="BerekenTotaal" Content="Bereken totaal VAA" HorizontalAlignment="Left" Margin="618,159,0,0" VerticalAlignment="Top" Width="143" Click="BerekenTotaal_Click"/>
         <Label Content="Totaal:" HorizontalAlignment="Left" Margin="618,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.534,2.57"/>
-        <Label x:Name="VAATotaal" Content="" HorizontalAlignment="Left" Margin="681,384,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="vaaTotaal" Content="" HorizontalAlignment="Left" Margin="681,384,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

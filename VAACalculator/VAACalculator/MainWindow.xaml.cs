@@ -20,24 +20,69 @@ namespace VAACalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public WagenStore Store { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            Store = new WagenStore();
+            updateScreen();
         }
 
         private void AddBenzineWagen_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                var wagen = new BenzineWagen(
+                    TextBoxPrijs.Text,
+                    TextBoxBouwjaar.Text,
+                    TextBoxNummerplaat.Text,
+                    TextBoxCO2.Text);
+                Store.WagenToevoegen(wagen);
+                updateScreen();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
 
         private void AddDieselWagen_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                var wagen = new DieselWagen(
+                    TextBoxPrijs.Text,
+                    TextBoxBouwjaar.Text,
+                    TextBoxNummerplaat.Text,
+                    TextBoxNOx.Text);
+                Store.WagenToevoegen(wagen);
+                updateScreen();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
 
         private void BerekenTotaal_Click(object sender, RoutedEventArgs e)
         {
+            vaaTotaal.Content = "€" + Store.VAATotaal();
+        }
 
+        private void updateScreen()
+        {
+            TextBoxBouwjaar.Text = "";
+            TextBoxCO2.Text = "";
+            TextBoxNOx.Text = "";
+            TextBoxNummerplaat.Text = "";
+            TextBoxOutput.Text = "";
+            TextBoxPrijs.Text = "";
+
+            foreach (var wagen in Store.Lijst())
+            {
+                TextBoxOutput.AppendText(wagen.ToString() + "\n");
+            }
         }
     }
 }

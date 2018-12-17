@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Vaa.Domain
+namespace VAACalculator
 {
     public class WagenStore
     {
@@ -10,10 +10,18 @@ namespace Vaa.Domain
         public WagenStore()
         {
             Data = new Dictionary<string, Wagen>();
-            Data.Add("ABC-123", new DieselWagen(10000.0m, 2009, "ABC-123", 99.9m));
-            Data.Add("ABC-456", new DieselWagen(12000.0m, 2007, "ABC-456", 99.9m));
-            Data.Add("GHJ-123", new DieselWagen(14000.0m, 2010, "GHJ-123", 99.9m));
-            Data.Add("GHJ-633", new DieselWagen(16000.0m, 2012, "GHJ-633", 99.9m));
+            try
+            {
+                Data.Add("ABC-123", new DieselWagen("10000", "2009", "ABC-123", "100"));
+                Data.Add("ABC-456", new DieselWagen("12000", "2007", "ABC-456", "100"));
+                Data.Add("GHJ-123", new BenzineWagen("14000", "2010", "GHJ-123", "100"));
+                Data.Add("GHJ-633", new DieselWagen("16000", "2012", "GHJ-633", "100"));
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
+            
         }
 
         public List<Wagen> Lijst()

@@ -1,6 +1,6 @@
 using System;
 
-namespace Vaa.Domain
+namespace VAACalculator
 {
     public abstract class Wagen
     {
@@ -10,7 +10,7 @@ namespace Vaa.Domain
 
         public override string ToString()
         {
-            return String.Format("catalogus prijs: {0}, bouwjaar: {1}, nummerplaat: {2}", CatalogusPrijs, Bouwjaar, Nummerplaat);
+            return String.Format("catalogus prijs: €{0},   bouwjaar: {1},   nummerplaat: {2}", CatalogusPrijs, Bouwjaar, Nummerplaat);
         }
 
         public abstract decimal VAA();

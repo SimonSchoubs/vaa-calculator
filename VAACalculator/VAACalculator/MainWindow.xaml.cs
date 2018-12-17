@@ -24,5 +24,20 @@ namespace VAACalculator
         {
             InitializeComponent();
         }
+
+        private void AddBenzineWagen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddDieselWagen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BerekenTotaal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -18,11 +18,11 @@
         <TextBox x:Name="TextBoxCO2" HorizontalAlignment="Left" Height="23" Margin="456,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TextBoxNOx" HorizontalAlignment="Left" Height="23" Margin="456,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TextBoxOutput" HorizontalAlignment="Left" Height="261" Margin="31,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545"/>
-        <Button Content="Voeg benzine wagen toe" HorizontalAlignment="Left" Margin="618,79,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button Content="Voeg diesel wagen toe" HorizontalAlignment="Left" Margin="618,115,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button Content="Bereken totaal VAA" HorizontalAlignment="Left" Margin="618,159,0,0" VerticalAlignment="Top" Width="143"/>
+        <Button x:Name="AddBenzineWagen" Content="Voeg benzine wagen toe" HorizontalAlignment="Left" Margin="618,79,0,0" VerticalAlignment="Top" Width="143" Click="AddBenzineWagen_Click"/>
+        <Button x:Name="AddDieselWagen" Content="Voeg diesel wagen toe" HorizontalAlignment="Left" Margin="618,115,0,0" VerticalAlignment="Top" Width="143" Click="AddDieselWagen_Click"/>
+        <Button x:Name="BerekenTotaal" Content="Bereken totaal VAA" HorizontalAlignment="Left" Margin="618,159,0,0" VerticalAlignment="Top" Width="143" Click="BerekenTotaal_Click"/>
         <Label Content="Totaal:" HorizontalAlignment="Left" Margin="618,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.534,2.57"/>
-        <Label x:Name="Totaal" Content="" HorizontalAlignment="Left" Margin="681,384,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="VAATotaal" Content="" HorizontalAlignment="Left" Margin="681,384,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -57,5 +57,16 @@ namespace Vaa.Domain
                 Data.Remove(nummerplaat);
             }
         }
+
+        public decimal VAATotaal()
+        {
+            decimal totaal = 0.0m;
+
+            foreach (var wagen in Data.Values)
+            {
+                totaal += wagen.VAA();
+            }
+            return totaal;
+        }
     }
 }
